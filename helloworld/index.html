@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React</title>
+</head>
+<body>
+<!--
+1. 添加一个 DOM 容器到 HTML
+2. 添加 Script 标签
+-->
+<div id="app"></div>
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/babel-standalone@6/babel.min.js" crossorigin></script>
+
+<script type="text/babel">
+    const renderElement = React.createElement;
+    class Btn extends React.Component{
+        constructor(props) {
+            super(props);
+            this.state = {
+                liked:false
+            }
+        }
+        render(){
+            if(this.state.liked){
+                return "You like this"
+            }
+            // return renderElement(
+            //     'button',
+            //     {onClick:()=>this.setState({liked: true})},
+            //     '按钮'
+            // )
+
+            /**
+             *  jsx 写法
+             */
+
+            return (
+                <button onClick={() => this.setState({ liked: true })}>
+                    Like
+                </button>
+            );
+        }
+    }
+
+    const root = document.querySelector("#app");
+    const app = ReactDOM.createRoot(root);
+    app.render(renderElement(Btn));
+</script>
+</body>
+</html>
