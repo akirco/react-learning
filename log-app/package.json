@@ -1,15 +1,15 @@
 {
-  "name": "helloworld-module",
+  "name": "log-app",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "watch": "babel --watch test/btn.js --out-dir test/_btn.js --presets react-app/prod",
-    "build": "react-scripts build"
+    "start": "react-scripts start"
   },
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1"
@@ -25,5 +25,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.34.0"
   }
 }

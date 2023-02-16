@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: aliceblue;
+  margin: 0;
+}
+
+.logs {
+  width: 800px;
+  margin: 50px auto;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #ccc;
+}
+
+.counter {
+  margin: 50px auto;
+}
