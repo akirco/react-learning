@@ -5,7 +5,10 @@ body {
   background-color: aliceblue;
   margin: 0;
 }
-
+#root {
+  display: flex;
+  flex-direction: column;
+}
 .logs {
   width: 800px;
   margin: 50px auto;

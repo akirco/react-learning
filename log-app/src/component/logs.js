@@ -1,14 +1,13 @@
-const logs = (props) => {
-  const data = props.test;
+const logs = ({ item, click }) => {
   return (
-    <div className="logs">
+    <div className="logs" onClick={click}>
       <div className="date">
-        <div className="month">{data.month}</div>
-        <div className="day">{data.day}</div>
+        <div className="month">{item.month}</div>
+        <div className="day">{item.day}</div>
       </div>
       <div className="content">
-        <h2 className="desc">{data.task}</h2>
-        <div className="time">{data.time}</div>
+        <h2 className="desc">{item.task}</h2>
+        <div className="time">{item.time}</div>
       </div>
     </div>
   );
